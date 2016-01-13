@@ -44,10 +44,30 @@
 <p>We have exposed a REST API for users to interact with PathCache. This is an easy to use (and work in progress) interface. As of now, our API:</p>
 
 <ul>
-<li>Given an AS number (asn), returns the graph constituted by paths to to the asn based on recent data plane measurements.</li>
-<li>Given two AS numbers (asn1, asn2), returns the path from asn1 to asn2 based on recent data plane measurements.</li>
-<li>Provides an endpoint to get daily updates made to the complete AS graph based on the measurements done in the last 24 hours.</li>
+<li>Given an AS number (asn), returns the graph constituted by paths to to the asn based on recent data plane measurements.
+** Endpoint: <em>/string:asn</em>
+</li>
 </ul>
+
+<p><code>GET</code>: curl -i http:path-cache-server:port/13812</p>
+
+<ul>
+<li>Given two AS numbers (asn1, asn2), returns the path from asn1 to asn2 based on recent data plane measurements.
+** Endpoint: <em>/asn1-asn2</em>
+</li>
+</ul>
+
+<p><code>GET</code>: curl -i http:path-cache-server:port/13812-174</p>
+
+<ul>
+<li>Provides an endpoint to get daily updates made to the complete AS graph based on the measurements done in the last 24 hours.
+** Endpoint: <em>/daily-update</em>
+</li>
+</ul>
+
+<p><code>GET</code>: curl -i http:path-cache-server:port/daily-update</p>
+
+<p>All responses are in JSON.</p>
 
 <h3>
 <a id="developement" class="anchor" href="#developement" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developement</h3>
