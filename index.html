@@ -43,29 +43,32 @@
 
 <p>We have exposed a REST API for users to interact with PathCache. This is an easy to use (and work in progress) interface. As of now, our API:</p>
 
-<ul>
-<li>Given an AS number (asn), returns the graph constituted by paths to to the asn based on recent data plane measurements.
-** Endpoint: <em>/string:asn</em>
-</li>
-</ul>
-
-<p><code>GET</code>: curl -i http:path-cache-server:port/13812</p>
+<p>Given an AS number (asn), returns the graph constituted by paths to the asn based on recent data plane measurements.</p>
 
 <ul>
-<li>Given two AS numbers (asn1, asn2), returns the path from asn1 to asn2 based on recent data plane measurements.
-** Endpoint: <em>/asn1-asn2</em>
+<li>Endpoint: <em>/asn</em>
 </li>
+<li>
+<code>GET</code>: curl -i http:path-cache-server:port/13812</li>
 </ul>
 
-<p><code>GET</code>: curl -i http:path-cache-server:port/13812-174</p>
+<p>Given two AS numbers (asn1, asn2), returns the path from asn1 to asn2 based on recent data plane measurements.</p>
 
 <ul>
-<li>Provides an endpoint to get daily updates made to the complete AS graph based on the measurements done in the last 24 hours.
-** Endpoint: <em>/daily-update</em>
+<li>Endpoint: <em>/asn1-asn2</em>
 </li>
+<li>
+<code>GET</code>: curl -i http:path-cache-server:port/13812-174</li>
 </ul>
 
-<p><code>GET</code>: curl -i http:path-cache-server:port/daily-update</p>
+<p>Provides an endpoint to get daily updates made to the Internet AS graph based on the measurements done in the last 24 hours.</p>
+
+<ul>
+<li>Endpoint: <em>/daily-update</em>
+</li>
+<li>
+<code>GET</code>: curl -i http:path-cache-server:port/daily-update</li>
+</ul>
 
 <p>All responses are in JSON.</p>
 
