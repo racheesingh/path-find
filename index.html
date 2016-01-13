@@ -1,37 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
+    <meta charset="UTF-8">
+    <title>PathCache by racheesingh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <title>PathFind by racheesingh</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">PathCache</h1>
+      <h2 class="project-tagline">Avoiding Redundant Traceroutes</h2>
+      <a href="https://github.com/racheesingh/path-find" class="btn">View on GitHub</a>
+      <a href="https://github.com/racheesingh/path-find/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/racheesingh/path-find/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <header>
-      <div class="container">
-        <h1>PathFind</h1>
-        <h2>Avoiding Redundant Traceroutes</h2>
+    <section class="main-content">
+      <h3>
+<a id="pathcache" class="anchor" href="#pathcache" aria-hidden="true"><span class="octicon octicon-link"></span></a>PathCache</h3>
 
-        <section id="downloads">
-          <a href="https://github.com/racheesingh/path-find/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/racheesingh/path-find/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/racheesingh/path-find" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <h3>
-<a id="pathfind" class="anchor" href="#pathfind" aria-hidden="true"><span class="octicon octicon-link"></span></a>PathFind</h3>
-
-<p>Running traceroutes from arbitrary sources to arbitrary destinations is an expensive process. PathFind reuses existing measurements on RIPE Atlas to gather information about the Internet that users can subscribe to. The benefits are two-fold:</p>
+<p>Running traceroutes from arbitrary sources to arbitrary destinations is an expensive process. PathCache reuses existing measurements on RIPE Atlas to gather information about the Internet that users can subscribe to. The benefits are two-fold:</p>
 
 <ul>
 <li>The users do not have to spend their own measurement budget to run traceroutes.</li>
@@ -39,16 +30,16 @@
 </ul>
 
 <h3>
-<a id="interacting-with-pathfind" class="anchor" href="#interacting-with-pathfind" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interacting With PathFind</h3>
+<a id="interacting-with-pathcache" class="anchor" href="#interacting-with-pathcache" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interacting With PathCache</h3>
 
-<p>We have exposed a REST API for users to interact with PathFind. This is an easy to use (and work in progress) interface. As of now, our API:</p>
+<p>We have exposed a REST API for users to interact with PathCache. This is an easy to use (and work in progress) interface. As of now, our API:</p>
 
 <ul>
 <li>Given an AS number (asn), returns the graph constituted by paths to to the asn based on recent data plane measurements.</li>
 <li>Given two AS numbers (asn1, asn2), returns the path from asn1 to asn2 based on recent data plane measurements.</li>
 <li>Provides an endpoint to get daily updates made to the complete AS graph based on the measurements done in the last 24 hours.
 ### Developement
-As you can see, PathFind is under active development. We hope to improve it incrementally based on how it gets used by us and the community.</li>
+As you can see, PathCache is under active development. We hope to improve it incrementally based on how it gets used by us and the community.</li>
 </ul>
 
 <h3>
@@ -60,10 +51,16 @@ As you can see, PathFind is under active development. We hope to improve it incr
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>If you are having troubles using PathFind, feel free to contact <a href="racsingh@cs.stonybrook.edu">us</a>. If you plan to write scripts that query our servers a lot, do let us know in advance so we can monitor how well we handled it (and improve).</p>
-      </section>
-    </div>
+<p>If you are having troubles using PathCache, feel free to contact <a href="racsingh@cs.stonybrook.edu">us</a>. If you plan to write scripts that query our servers a lot, do let us know in advance so we can monitor how well we handled it (and improve).</p>
 
-    
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/racheesingh/path-find">PathCache</a> is maintained by <a href="https://github.com/racheesingh">racheesingh</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
